@@ -1,8 +1,8 @@
-//Реализовать простой калькулятор
+package dz_les1;//Реализовать простой калькулятор
 
 import java.util.Scanner;
 
-public class task3 {
+public class dz1_task3 {
     public static void main(String[] args){
         Scanner user_input = new Scanner(System.in);
         System.out.println("Введите число A: ");

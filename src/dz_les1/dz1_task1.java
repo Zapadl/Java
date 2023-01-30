@@ -1,7 +1,7 @@
-//Вычислить n-ое треугольного число(сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
+package dz_les1;//Вычислить n-ое треугольного число(сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
 import java.util.Scanner;
 
-public class task1 {
+public class dz1_task1 {
     public static void main(String[] args)  {
             Scanner user_input = new Scanner(System.in);
             System.out.println("Введите число N: ");

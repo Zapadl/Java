@@ -1,7 +1,7 @@
-//Вывести все простые числа от 1 до 1000
+package dz_les1;//Вывести все простые числа от 1 до 1000
 
 
-public class task2 {
+public class dz1_task2 {
     public static void main(String[] args) {
         for (int i=2;i<1000;++i){
             int count = 0;
