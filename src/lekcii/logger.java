@@ -2,6 +2,7 @@ package lekcii;
 
 import java.io.FileWriter;
 import java.util.logging.Logger;
+import java.util.logging.FileHandler;
 
 public class logger {
      public static void main(String[] args) {
