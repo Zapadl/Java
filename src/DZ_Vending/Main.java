@@ -1,7 +1,12 @@
 package DZ_Vending;
 
 
+import DZ_Vending.Drinks.Drink;
 import DZ_Vending.Drinks.HotDrink;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +15,10 @@ public class Main {
         HotDrink cappuccino = new HotDrink("Капучино", 250,80,90);
 
 
-//        List<Drink> drinks = new ArrayList<>();
+        List<Drink> drinks = new ArrayList<>();
+        drinks.add(tea);
+        drinks.add(latte);
+        drinks.add(cappuccino);
 
         HotDrinkVending hotDrinkVending = new HotDrinkVending();
         hotDrinkVending.initProduct(tea);
@@ -18,8 +26,13 @@ public class Main {
         hotDrinkVending.initProduct(cappuccino);
 
 
-        System.out.println(hotDrinkVending);
-        System.out.println(hotDrinkVending.getProduct("Капучино", 250,90));
-        System.out.println(hotDrinkVending);
+//        System.out.println(hotDrinkVending);
+//        System.out.println(hotDrinkVending.getProduct("Капучино", 250,90));
+//        System.out.println(hotDrinkVending);
+
+        Iterator<Drink> iterator = new DrinkIterator(drinks);
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
 }
 }
