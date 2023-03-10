@@ -3,6 +3,7 @@ package DZ_Vending;
 // реализовать перегруженный метод getProduct(int name, int volume, int temperature)
 // выдающий продукт соответствующий имени, объему и температуре
 
+import DZ_Vending.Drinks.Coffee;
 import DZ_Vending.Drinks.Drink;
 import DZ_Vending.Drinks.HotDrink;
 import Vending.VendingMachine;
@@ -12,12 +13,12 @@ import java.util.List;
 
 public class HotDrinkVending implements MainVending<HotDrink> {
     private List<HotDrink> drinkList;
+
     public  HotDrinkVending() {
           this.drinkList = new ArrayList<>();
         }
-    public void initProduct(HotDrink drink) {
-        drinkList.add(drink);
-    }
+    public void initProduct(HotDrink drink) { drinkList.add(drink);   }
+
 
 
 
@@ -38,6 +39,14 @@ public class HotDrinkVending implements MainVending<HotDrink> {
         }
         return null;
     }
+
+    public static <T extends Drink> void moveDrink(List<? extends T> source, List<T> dest) {
+        for (T sr: source) {
+            dest.add(sr);
+        }
+    }
+
+
 
     @Override
     public String toString() {
